@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./assets/style.css">
@@ -6,46 +7,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="./assets/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   </head>
 
   <body >
-        <div class="container">
-          <div class="clock">
-            <div class="inside">
-                <div class="content">
-                    <p class='days'>
-                      <span id="lun">Lundi</span>
-                      <span id="mar">Mardi</span>
-                      <span id="mer">Mercredi</span>
-                      <span id="jeu">Jeudi</span>
-                      <span id="ven">Vendredi</span>
-                      <span id="sam">Samedi</span>
-                      <span id="dim">Dimanche</span>
-                    </p>
-                    <br>
-                    <p class='text'>
-                      <span id='hours'></span>
-                       :
-                      <span id='min'></span>
-                       :
-                      <span id='sec'></span>
-                    </p>
-                    <p id=date>
-                        <span id='cal'><img src="https://i.imgur.com/DzEzjHh.png?1" alt="cal" /></span>
-                        <span id='day'></span>
-                        <span id='month'></span>
-                        <span id='year'></span>
-                    </p>
-                    <br>
-                    <p>
-                      <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#alarm">
-                        Alarm
-                      </button>
-                    </p>
-                </div>
+    <div class="page-loader">
+      <div class="loader"></div>
+    </div>
+
+    <div class="container">
+      <div class="clock">
+        <div class="inside">
+            <div class="content">
+                <p class='days'>
+                  <span id="lun">Lundi</span>
+                  <span id="mar">Mardi</span>
+                  <span id="mer">Mercredi</span>
+                  <span id="jeu">Jeudi</span>
+                  <span id="ven">Vendredi</span>
+                  <span id="sam">Samedi</span>
+                  <span id="dim">Dimanche</span>
+                </p>
+                <br>
+                <p class='text'>
+                  <span id='hours'></span>
+                   :
+                  <span id='min'></span>
+                   :
+                  <span id='sec'></span>
+                </p>
+                <p id=date>
+                    <span id='cal'><img src="https://i.imgur.com/DzEzjHh.png?1" alt="cal" /></span>
+                    <span id='day'></span>
+                    <span id='month'></span>
+                    <span id='year'></span>
+                </p>
+                <br>
+                <p>
+                  <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#alarm">
+                    Alarm
+                  </button>
+                </p>
             </div>
         </div>
-      </div>
+    </div>
+  </div>
 
       <!-- The modal -->
       <div class="modal" id="alarm">
