@@ -1,13 +1,12 @@
 var daysofweek = ['lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim'];
-var month =['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+var month =['Janv', 'Fevr', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Aout', 'Septe', 'Octo', 'Nove', 'Dece'];
 
 function clock(){
-    // setting up my variables
+    // variables de la date
     var today = new Date();
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
-    var day = h<12 ? 'AM': 'PM';
     var daytoday = today.getDay();
     var date = today.getDate();
     var mon = today.getMonth();
@@ -15,17 +14,16 @@ function clock(){
 
 
 
-    // adding leading zeros to them
+    // Ajout des zeros avant
     h = h<10? '0'+h: h;
     m = m<10? '0'+m: m;
     s = s<10? '0'+s: s;
 
-    // writing it down in the document
-    document.getElementById('hours').innerHTML = h;
+    // Change les valeurs du document
+    document.getElementById('hours').innerText = h;
     document.getElementById('min').innerHTML = m;
     document.getElementById('sec').innerHTML = s;
-    document.getElementById('time').innerHTML = day;
-    document.getElementById(''+daysofweek[daytoday]+'').style.color = '#fff';
+    document.getElementById(''+daysofweek[(daytoday-1)]+'').style.color = '#fff';
     document.getElementById('day').innerHTML = date;
     document.getElementById('month').innerHTML = month[mon];
     document.getElementById('year').innerHTML = year ;
