@@ -23,7 +23,7 @@
           var mon = today.getMonth();
           var y = today.getFullYear();
 
-          daytoday = daytoday-1===0? 6: daytoday-1;
+          daytoday = daytoday-1===-1? 6: daytoday-1;
           // Variable du document
           var hours = document.getElementById('hours');
           var min = document.getElementById('min');
